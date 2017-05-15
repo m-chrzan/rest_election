@@ -24,4 +24,11 @@ from rest_election import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^index/$', views.index),
+    url(r'^Polska/$', views.country),
+    url(r'^Polska/(?P<voivodeship>(?:\w|-)+)/$', views.voivodeship),
+    url(r'^Polska/(?P<voivodeship>(?:\w|-)+)/(?P<district>\d+)/$',
+        views.district),
+    url(r'^Polska/(?P<voivodeship>(?:\w|-)+)/(?P<district>\d+)/(?P<gmina>[^\/]+)/$',
+        views.gmina),
 ]
