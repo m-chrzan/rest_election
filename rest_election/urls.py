@@ -31,4 +31,4 @@ urlpatterns = [
         views.district),
     url(r'^Polska/(?P<voivodeship>(?:\w|-)+)/(?P<district>\d+)/(?P<gmina>[^\/]+)/$',
         views.gmina),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

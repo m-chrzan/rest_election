@@ -1,0 +1,12 @@
+{% load static %}
+{% load render_bundle from webpack_loader %}
+<html>
+  <head>
+    <title>Wybory Prezydenckie Rzeczypospolitej Polskiej 2000</title>
+    </script>
+  </head>
+  <body>
+    <div id="container"></div>
+    {% render_bundle 'main' %}
+  </body>
+</html>
