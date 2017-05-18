@@ -2,14 +2,12 @@ import { DisplayData } from '../containers/DisplayData'
 import React from 'react'
 import { Component } from 'react'
 import { connect } from 'react-redux'
+import { loadData } from '../components/loadData'
 
 export class ElectionsAppView extends Component {
   constructor(props) {
     super(props)
-    this.xhr = new XMLHttpRequest()
-    this.xhr.onreadystatechange = () => { this.onXhrStateChange() }
-    this.xhr.open('GET', '/Polska/', true)
-    this.xhr.send()
+    loadData('/Polska/', props.onReceiveData)
   }
 
   onXhrStateChange() {
