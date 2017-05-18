@@ -1,5 +1,10 @@
 let initialState = {
-  locative: ""
+  locative: "",
+  votes: {},
+  statistics: {
+    ballots_valid: 0,
+    ballots_given_out: 0
+  }
 }
 
 export const mainReducer = (state = initialState, action) => {
