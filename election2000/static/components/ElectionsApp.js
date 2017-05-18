@@ -3,6 +3,7 @@ import React from 'react'
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import { loadData } from '../components/loadData'
+import { Navigation } from '../containers/Navigation'
 
 export class ElectionsAppView extends Component {
   constructor(props) {
@@ -19,6 +20,7 @@ export class ElectionsAppView extends Component {
   render() {
     return (
       <div>
+        <Navigation className='section'></Navigation>
         <DisplayData></DisplayData>
       </div>
     )

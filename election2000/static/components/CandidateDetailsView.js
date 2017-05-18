@@ -4,7 +4,7 @@ import { CandidateTable } from './CandidateTable'
 export const CandidateDetailsView = ({ votes, ballots_valid }) => {
   return (
     <div>
-      <h1>CandidateDetails</h1>
+      <h2>CandidateDetails</h2>
       <CandidateTable votes={votes} ballots_valid={ballots_valid}>
       </CandidateTable>
     </div>

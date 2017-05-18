@@ -12,9 +12,9 @@ export const CandidateTable = ({ votes, ballots_valid }) => {
       </thead>
       <tbody>
         {
-          Object.keys(votes).map((candidate) => {
+          Object.keys(votes).map((candidate, i) => {
             return (
-              <tr key={candidate}>
+              <tr key={i} className={i%2===0 ? 'even-row' : 'odd-row'}>
                 <td>{candidate}</td>
                 <td>{votes[candidate]}</td>
                 <td>{ (100 * votes[candidate] / ballots_valid).toFixed(2) }</td>

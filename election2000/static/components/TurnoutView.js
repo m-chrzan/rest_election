@@ -10,7 +10,7 @@ export const TurnoutView = (
   }) => {
   return (
     <div>
-      <h1>Turnout</h1>
+      <h2>Turnout</h2>
       <table>
         <thead>
           <tr>
@@ -20,9 +20,9 @@ export const TurnoutView = (
         </thead>
         <tbody>
           {
-            subregions.map((subregion) => {
+            subregions.map((subregion, i) => {
               return (
-                <tr key={subregion.name}>
+                <tr key={subregion.name} className={i%2 === 0 ? 'even-row' : 'odd-row'}>
                   <td onClick={() => {
                     loadData('/' +
                       region_path.concat(subregion.name).join('/') + '/',

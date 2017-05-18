@@ -7,15 +7,17 @@ export const VotesChart = ({ votes, ballots_valid }) => {
   }).sort((a, b) => { return a[1] - b[1] })
 
   return (
-    <Chart
-      chartType="PieChart"
-      data={[['candidate', 'votes']].concat(candidates)}
-      options={{
-        sliceVisibilityThreshold: 0.03,
-        tooltip: {text: 'percentage', trigger: 'selection'},
-        height: 400,
-        width: 1000
-      }}
-    ></Chart>
+    <div>
+      <Chart
+        chartType="PieChart"
+        data={[['candidate', 'votes']].concat(candidates)}
+        options={{
+          sliceVisibilityThreshold: 0.03,
+          tooltip: {text: 'percentage', trigger: 'selection'},
+          height: 300,
+          width: 800
+        }}
+      ></Chart>
+    </div>
   )
 }
