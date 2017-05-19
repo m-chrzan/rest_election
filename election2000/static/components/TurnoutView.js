@@ -6,11 +6,12 @@ export const TurnoutView = (
     subregions,
     subregion_nominative,
     onReceiveData,
-    region_path
+    region_path,
+    locative
   }) => {
   return (
     <div>
-      <h2>Turnout</h2>
+      <h2>Frekwencja w {locative}</h2>
       <table>
         <thead>
           <tr>
