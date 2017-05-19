@@ -1,8 +1,8 @@
 import { connect } from 'react-redux'
 import { CandidateDetailsView } from '../components/CandidateDetailsView'
 
-const mapStateToProps = ({ votes, statistics: { ballots_valid }}) => {
-  return { votes, ballots_valid }
+const mapStateToProps = ({ region: { locative, votes, statistics: { ballots_valid }}}) => {
+  return { votes, ballots_valid, locative }
 }
 
 const mapDispatchToProps = (dispatch) => {

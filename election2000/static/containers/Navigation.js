@@ -1,8 +1,8 @@
 import { connect } from 'react-redux'
 import { NavigationView } from '../components/NavigationView'
 
-const mapStateToProps = ({ region_path }) => {
-  return  { region_path }
+const mapStateToProps = ({ region: { region_path }, user}) => {
+  return  { region_path, user }
 }
 
 const mapDispatchToProps = (dispatch) => {

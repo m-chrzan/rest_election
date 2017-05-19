@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { DisplayDataView } from '../components/DisplayDataView'
 
-let mapStateToProps = ({locative}) => {
+let mapStateToProps = ({ region: { locative }}) => {
   return { locative }
 }
 

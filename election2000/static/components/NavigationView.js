@@ -1,7 +1,7 @@
 import React from 'react'
 import { loadData } from './loadData'
 
-export const NavigationView = ({ region_path, onReceiveData }) => {
+export const NavigationView = ({ region_path, onReceiveData, user }) => {
   return (
     <div>
       <ul>
@@ -17,6 +17,10 @@ export const NavigationView = ({ region_path, onReceiveData }) => {
           })
         }
       </ul>
+      { user === "" ?
+      (<div><a href='/login/'>Zaloguj się</a></div>) :
+      (<div>Zalogowany jako {user}. <a href='/logout/'>Wyloguj się</a></div>)
+      }
     </div>
   )
 }

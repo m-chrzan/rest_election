@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { PercentageVotesView } from '../components/PercentageVotesView'
 
-const mapStateToProps = ({ locative, votes, statistics: { ballots_valid }}) => {
+const mapStateToProps = ({ region: { locative, votes, statistics: { ballots_valid }}}) => {
   return { locative, votes, ballots_valid }
 }
 

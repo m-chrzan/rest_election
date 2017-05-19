@@ -1,12 +1,16 @@
 let initialState = {
-  locative: "",
-  votes: {},
-  statistics: {
-    ballots_valid: 0,
-    ballots_given_out: 0
+  region: {
+    locative: "",
+    votes: {},
+    statistics: {
+      ballots_valid: 0,
+      ballots_given_out: 0
+    },
+    subregions: [],
+    subregion_nominative: "",
+    region_path: []
   },
-  subregions: [],
-  subregion_nominative: ""
+  user: ""
 }
 
 export const mainReducer = (state = initialState, action) => {

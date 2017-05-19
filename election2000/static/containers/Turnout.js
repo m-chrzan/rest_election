@@ -1,8 +1,8 @@
 import { connect } from 'react-redux'
 import { TurnoutView } from '../components/TurnoutView'
 
-const mapStateToProps = ({ subregions, subregion_nominative, region_path }) => {
-  return { subregions, subregion_nominative, region_path }
+const mapStateToProps = ({ region: { locative, subregions, subregion_nominative, region_path }}) => {
+  return { subregions, subregion_nominative, region_path, locative }
 }
 
 const mapDispatchToProps = (dispatch) => {
